@@ -1,0 +1,73 @@
+public class Candy {
+	public String taste()
+    {
+        return "tastes sweet!";
+    }
+
+	public static void main(String[] args) {
+		Candy c1 = new Candy();
+		System.out.println(c1.taste());
+		Candy c2 = new Chocolate();
+		System.out.println(c2.taste());
+	}
+}
+
+class Chocolate extends Candy {
+	public String taste() {
+		return "tastes chocolately";
+	}
+}
+
+public class JavaMethodOverriding {
+	public static void main(String []args)
+	   {
+	      Sports C1=new Sports();
+	      Soccer C2=new Soccer();
+	      System.out.println(C1.get_name());
+	      C1.get_number_of_team_members();
+	      System.out.println(C2.get_name());
+	      C2.get_number_of_team_members();
+	   }
+}
+
+class Soccer extends Sports
+{
+   String get_name()
+   {
+      return "Soccer Class";
+   }
+    void get_number_of_team_members()
+   {
+      System.out.println("Each team has 11 players in "+get_name());
+   }
+}
+
+class Sports{
+
+	   String get_name()
+	   {
+	      return "Generic Sports";
+	   }
+	   void get_number_of_team_members()
+	   {
+	      System.out.println("Each team has n players in "+get_name());
+	   }
+	}
+  
+  public class Test1
+{
+    public static void talk()
+    {
+          System.out.println("hello there!");
+    }
+
+    public static void talk(String name)
+    {
+          System.out.println("Hello " + name);
+    }
+
+    public static void main(String[] args)
+    {
+          talk("Matthew");
+    }
+}
