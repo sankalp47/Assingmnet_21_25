@@ -1,0 +1,86 @@
+abstract class Car1 {
+    static {
+        System.out.print("1");
+    }
+
+    public Car1(String name) {
+        super();
+        System.out.print("2");
+    }
+
+    {
+        System.out.print("3");
+    }
+}
+
+public class BlueCar extends Car1 {
+    {
+        System.out.print("4");
+    }
+
+    public BlueCar() {
+        super("blue");
+        System.out.print("5");
+    }
+
+    public static void main(String[] gears) {
+        new BlueCar();
+    }
+}
+
+//Circle.java
+public class Circle extends Shape { 
+	protected void display() {
+	     System.out.println("Display-derived");
+	 }
+}
+
+class Automobile {
+    private String drive() {
+        return "Driving vehicle";
+    }
+}
+
+class Car extends Automobile {
+    protected String drive() {
+        return "Driving car";
+    }
+}
+
+public class ElectricCar extends Car {
+
+    @Override
+    public final String drive() {
+        return "Driving electric car";
+    }
+
+    public static void main(String[] wheels) {
+        final Car car = new ElectricCar();
+        System.out.print(car.drive());
+    }
+}
+
+class Math {
+    public final double secret = 2;
+}
+
+class ComplexMath extends Math {
+    public final double secret = 4;
+}
+
+public class InfiniteMath extends ComplexMath {
+    public final double secret = 8;
+
+    public static void main(String[] numbers) {
+        Math math = new InfiniteMath();
+        System.out.print(math.secret);
+    }
+}
+
+//Shape.java
+public class Shape {
+ protected void display() {
+     System.out.println("Display-base");
+ }
+}
+
